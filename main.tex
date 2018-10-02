@@ -1,0 +1,104 @@
+\documentclass[10pt]{report}
+
+\usepackage{subfiles}
+
+% \usepackage{hyperref}
+\usepackage{biblatex}
+\usepackage{epsfig}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{physics}
+\usepackage{siunitx}
+\usepackage{colortbl}
+\usepackage[super]{nth}
+%\usepackage{rotate}
+%\usepackage{polyglossia}
+%\usepackage{unicode-math}
+\usepackage{color}
+%\usepackage{fontspec}
+\usepackage{subfig}
+%\usepackage[affil-it]{authblk}
+%\usepackage{fixltx2e}
+%\usepackage{dblfloatfix}
+\usepackage{bibunits}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage[left]{lineno}
+\usepackage[section]{placeins}
+
+\hypersetup{
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=cyan,          % color of internal links
+    citecolor=magenta,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=cyan,           % color of external links
+    runcolor=cyan
+}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\figurewidth}{0.8 \columnwidth}
+\newcommand{\beqarr}{\begin{eqnarray}}
+\newcommand{\eeqarr}{\end{eqnarray}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\e}{{\text e}}
+\newcommand{\rmd}{{\text d}}
+\newcommand{\mc}{\mathcal}
+\newcommand{\JJ}[1]{{\textcolor{blue}{[#1]}}}
+\newcommand{\DL}[1]{{\textcolor{red}{[DL: #1]}}}
+\newcommand{\JR}[1]{{\textcolor{green}{[#1]}}}
+\newcommand{\MS}[1]{{\textcolor{orange}{[#1]}}}
+\newcommand{\GeV}{\giga\electronvolt}
+\newcommand{\TeV}{\tera\electronvolt}
+\newcommand{\ignore}[1]{}
+
+%\defaultfontfeatures{Ligatures=TeX,Mapping=tex-text} 
+%\setmainfont[Mapping=tex-text]{Palatino}
+%\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans}
+%\setmonofont[Scale=MatchLowercase]{Andale Mono}
+%\defaultbibliography{refs.bib}
+
+\usepackage[printwatermark]{xwatermark}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{lipsum}
+
+\addbibresource{refs.bib}
+
+
+\title{Solving a Higgs optimization problem with quantum annealing for machine learning}
+
+
+
+%\newwatermark*[allpages,color=red!50,angle=45,scale=3,xpos=0,ypos=0]{DRAFT}
+\begin{document}
+
+% \author[$^{1\circ}$]{Alex Mott}
+% \author[$^2$]{Joshua Job}
+% \author[$^1$]{Jean-Roch Vlimant}
+% \author[$^3$]{Daniel Lidar}
+% \author[$^{1*}$]{Maria Spiropulu}
+% \affil[1]{Department of Physics, California Institute of Technology, Pasadena, 91125, USA }
+% \affil[2]{Department of Physics,
+% and Center for Quantum Information Science \& Technology,
+% University of Southern California, Los Angeles, California 90089, USA}
+% \affil[3]{Departments of Electrical Engineering, Chemistry and Physics,
+% and Center for Quantum Information Science \& Technology,
+% University of Southern California, Los Angeles, California 90089, USA}
+% \affil[{$^\circ$}]{\small{Now at DeepMind}}
+% \affil[*]{\small{smaria@caltech.edu}}
+
+% \keywords{Higg, quantum annealing, machine learning}
+
+% \begin{abstract}
+% 	The discovery of the Higgs boson decays in a background of Standard Model processes was assisted by machine learning methods \cite{Chatrchyan:2012xdj,Aad:2012tfa}. The classifiers used to separate signal from background are trained using  highly unerring but not completely perfect simulations of the physical processes involved, often resulting in label noise and systematic errors. We investigate the application of quantum\cite{kadowaki_quantum_1998,RevModPhys.80.1061,Neven1,Pudenz:2013kx} and classical annealing\cite{kirkpatrick_optimization_1983,katzgraber:06a} in solving a Higgs signal versus background machine learning optimization problem.  We bag a set of weak classifiers built based on the kinematic observables of the Higgs decay photons into a strong classifier that is highly resilient against overtraining and errors in the Monte Carlo simulation correlations of the physics observables. We show that the resulting quantum and classical annealing classifier systems perform comparably to current state of the art machine learning methods used in particle physics\cite{keras,xgboost} and are simple functions of directly interpretable experimental parameters with a clear physical meaning. The annealer-trained classifiers exploit the excited states in the vicinity of the ground state and demonstrate some advantage for small training sizes. This  technique may find application in other areas of experimental particle physics given the algorithm's relative simplicity and robustness to error.
+% \end{abstract}
+
+%  \linenumbers
+\flushbottom
+\maketitle
+\chapter[Higgs]{Solving a Higgs optimization problem with quantum annealing for machine learning}
+\subfile{chapters/Higgs/a_higgs}
+\printbibliography
+\end{document}
